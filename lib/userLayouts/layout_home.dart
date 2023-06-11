@@ -19,13 +19,73 @@ class _HomeLayoutState extends State<HomeLayout> {
           backgroundColor: Color(0xff171717),
           automaticallyImplyLeading: false,
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(200),
+            preferredSize: Size.fromHeight(150),
             child: Column(
-              children: [],
+              children: [
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.white),
+                  ),
+                  child: Center(
+                    child: Image(
+                      height: 45,
+                      width: 45,
+                      image: AssetImage('images/Homep.png'),
+                    ),
+                  ),
+                ),
+                Text(
+                  'Hello, Jhon',
+                  style: TextStyle(
+                    color: Color(0xff999595),
+                    fontFamily: 'PoppinsRegular',
+                    fontSize: 12,
+                  ),
+                ),
+                Text(
+                  'Make your own food,',
+                  style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                    fontFamily: 'PoppinsMedium',
+                    fontSize: 15,
+                  ),
+                ),
+                RichText(
+                  text: TextSpan(
+                    text: 'stay at ',
+                    style: TextStyle(
+                      color: Color(0xffFFFFFF),
+                      fontFamily: 'PoppinsMedium',
+                      fontSize: 15,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: 'Home',
+                        style: TextStyle(
+                          color: Color(0xffF7BB0E),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 30,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    color: Color(0xffF7BB0E),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Icon(
+                    Icons.search,
+                    color: Colors.white,
+                    size: 15,
+                  ),
+                ),
+              ],
             ),
-          ),
-          leading: Column(
-
           ),
           actions: [
             Icon(Icons.notification_add),
@@ -158,6 +218,14 @@ class _HomeLayoutState extends State<HomeLayout> {
         body: SingleChildScrollView(
           child: Column(
             children: [
+              Text(
+                'Feature Recipe',
+                style: TextStyle(
+                  color: Color(0xff000000),
+                  fontSize: 15,
+                  fontFamily: 'PoppinsSemiBold',
+                ),
+              ),
               SizedBox(
                 height: 153,
                 child: ListView.separated(
